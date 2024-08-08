@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f7fb;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 180px;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  color: #ff7f50;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  width: 300px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.appointment-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .appointment-button {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+}
